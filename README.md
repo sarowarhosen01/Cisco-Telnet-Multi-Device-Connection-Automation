@@ -23,6 +23,23 @@ The script logs in with provided credentials, enters enable mode, executes comma
 
 ---
 
+```
+enable
+configure terminal
+
+enable secret cisco123
+
+username admin password cisco123
+
+line vty 0 4
+login local
+transport input telnet
+exit
+end
+
+write memory
+```
+
 ## 🛠️ Requirements
 
 - Python 3.8+
